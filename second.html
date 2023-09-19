@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame with Different Border Width and Height</title>
+    <style>
+        #frame {
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Border Width and Height</h1>
+    <div id="frame"></div>
+    <select id="border-width">
+        <option value="1px">1px</option>
+        <option value="2px">2px</option>
+        <option value="3px">3px</option>
+    </select>
+    <select id="border-height">
+        <option value="1px">1px</option>
+        <option value="2px">2px</option>
+        <option value="3px">3px</option>
+    </select>
+
+    <script>
+        const frame = document.getElementById('frame');
+        const borderWidthSelect = document.getElementById('border-width');
+        const borderHeightSelect = document.getElementById('border-height');
+
+        // Add event listeners to the select tags
+        borderWidthSelect.addEventListener('change', updateFrame);
+        borderHeightSelect.addEventListener('change', updateFrame);
+
+        // Function to update the frame's border width and height
+        function updateFrame() {
+            const borderWidth = borderWidthSelect.value;
+            const borderHeight = borderHeightSelect.value;
+
+            frame.style.borderWidth = borderWidth;
+            frame.style.height = borderHeight;
+        }
+    </script>
+</body>
+</html>

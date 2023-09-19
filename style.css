@@ -1,0 +1,19 @@
+
+#container{
+        height: 45%;
+        width: 40%;
+        position: absolute;
+        background-color: white;
+        left: 40%;
+        border-color: black;
+        border: 5px ridge #000; 
+        border-radius: 20px; 
+        border-thickness:2px;
+       
+     }
+  
+    p{
+        font-family:cursive;
+        color: brown;
+        font-size: 28px;
+    }   

@@ -1,0 +1,76 @@
+<html>
+ <head>
+   
+     <link rel="stylesheet" href="style.css">
+     <script src="main.js"></script>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+     <title>>Frame with Different Border Width and Height</title>
+     <style>
+        #frame {
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+               }
+    </style>
+   
+ </head>
+ <body>
+  
+<div id="container"> </div><br>
+ 
+       <label for="border-style"><p>Select a borderstyle </p></label>
+        <select id="border-style" onchange="changeBorderStyle()">
+            <option value="solid">Solid</option>
+            <option value="dotted">Dotted</option>
+            <option value="dashed">Dashed</option>
+            <option value="double">Double</option>
+            <option value="groove">Groove</option>
+            <option value="ridge">ridge</option>
+            <option value="inset">inset</option>
+            <option value="outset">outset</option>
+            <option value="hidden">hidden</option>
+            <option value="dotted dashed solid double">dotted dashed solid double</option>
+          
+         </select>
+      <h1>Select Border Width and Height</h1>
+    <div id="frame"></div>
+    <select id="border-width">
+        <option value="1px">1px</option>
+        <option value="2px">2px</option>
+        <option value="3px">3px</option>
+        <option value="4px">4px</option>
+        <option value="5px">5px</option>
+        <option value="6px">6px</option>
+    </select>
+    <select id="border-height">
+        <option value="1px">1px</option>
+        <option value="2px">2px</option>
+        <option value="3px">3px</option>
+        <option value="4px">4px</option>
+        <option value="5px">5px</option>
+        <option value="6px">6px</option>
+    </select>
+
+    <script>
+        const frame = document.getElementById('frame');
+        const borderWidthSelect = document.getElementById('border-width');
+        const borderHeightSelect = document.getElementById('border-height');
+
+   
+        borderWidthSelect.addEventListener('change', updateFrame);
+        borderHeightSelect.addEventListener('change', updateFrame);
+
+       
+        function updateFrame() {
+            const borderWidth = borderWidthSelect.value;
+            const borderHeight = borderHeightSelect.value;
+
+            frame.style.borderWidth = borderWidth;
+            frame.style.height = borderHeight;
+        }
+    </script>
+     
+    </body>
+</html>
